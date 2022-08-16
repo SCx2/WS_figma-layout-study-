@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website (by grid)🥳</title>
+    <style>
+        .logotip,
+        .navi,
+        .header,
+        .main1,
+        .main2,
+        .main3,
+        .main4,
+        .main5,
+        .brands,
+        .footer1,
+        .footer2,
+        .footer3,
+        .footer4 {
+            /*color: black;*/
+            /*border: 1px solid red;*/
+            text-align: center;
+            padding: 5em;
+            grid-gap: 1rem;
+        }
+
+
+        .logo {
+            grid-column: 1/5;
+            grid-rows: 1/2;
+        }
+
+        .logo.logotip {
+            grid-column: 1/3;
+            grid-rows: 1/2;
+        }
+
+        .logo.navi {
+            grid-column: 3/5;
+            grid-rows: 1/2;
+        }
+
+        .header {
+            grid-column: 1/5;
+            grid-row: 2/3;
+        }
+
+        .brands {
+            grid-column: 1/5;
+            grid-row: 3/4;
+        }
+
+        .main1_1 {
+            grid-column: 1/5;
+            grid-row: 4/5;
+        }
+
+        .main1 {
+            grid-column: 1/5;
+            grid-row: 4/5;
+        }
+
+        .main2 {
+            grid-column: 1/5;
+            grid-row: 5/6;
+        }
+
+        .main3_1 {
+            grid-column: 1/5;
+            grid-row: 6/7;
+        }
+
+        .main4 {
+            grid-column: 1/5;
+            grid-row: 7/8;
+        }
+
+        .main5 {
+            grid-column: 1/5;
+            grid-row: 8/9;
+        }
+
+        .brands {
+            grid-column: 1/5;
+            grid-row: 3/4;
+        }
+
+        .footer {
+            grid-column: 1/5;
+            grid-row: 9/10;
+        }
+
+        .footer1,
+        .footer1_1 {
+            grid-column: 1/2;
+            grid-row: 9/10;
+        }
+
+        .footer2 {
+            grid-column: 2/3;
+            grid-row: 9/10;
+        }
+
+        .footer3 {
+            grid-column: 3/4;
+            grid-row: 9/10;
+        }
+
+        .footer4 {
+            grid-column: 4/5;
+            grid-row: 9/10;
+        }
+
+        .button1 {
+            color: white;
+            width: 134px;
+            height: 62px;
+            left: 706px;
+            top: 10px;
+
+            background: #000000;
+
+            border-radius: 7px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: -0.03em;
+
+        }
+
+        .navi {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding: 0px;
+            gap: 3em;
+
+        }
+
+        .nav-item1,
+        .nav-item2,
+        .nav-item3,
+        .nav-item4 {
+            width: 5em;
+            height: 1em;
+
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 33px;
+            letter-spacing: 0.01em;
+
+            color: #242323;
+        }
+
+        .main1_1 {
+            display: flex;
+            align-items: flex-end;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 48px;
+        }
+
+        .main3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .main5 {
+            background: #E5C643;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer {
+            background: black;
+            padding: 5em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .footer1 {
+            padding: 0px;
+            gap: 3em;
+        }
+
+        .footer1_1 {
+            padding: 0px;
+            gap: 1em;
+        }
+
+        .footer1,
+        .footer2,
+        .footer3,
+        .footer4 {
+            color: #8E8E8E;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        @media screen and (min-width: 600px) {
+            .footer4 {
+                grid-column: 1/5;
+                grid-row: 9/10;
+            }
+
+
+
+            .container {
+                display: grid;
+                grid-template-columns: repaet (4, 1fr);
+                height: 50vh;
+                grid-template-rows: repeat(9, 1fr);
+                grid-template-columns: repeat(auto-fit);
+            }
+        }
+
+        @media screen and (min-width: 400px) and (max-width: 599px) {
+
+            .footer1,
+            .footer2,
+            .footer3,
+            .footer4 {
+                display: none;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repaet (4, 1fr);
+                height: 50vh;
+                grid-template-rows: repeat(9, 1fr);
+                grid-template-columns: repeat(auto-fit);
+            }
+        }
+
+        @media screen and (max-width: 399px) {
+
+            .footer1,
+            .footer2,
+            .footer3,
+            .footer4 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span class="logotip">
+                <img src="/6 week/homewoork/2/images/Vector.png">
+                <img src="/6 week/homewoork/2/images/FASHION.png">
+            </span>
+            <div class="navi">
+                <span class="nav-item1"><a href=" #">CATALOGUE</a></span>
+                <span class="nav-item2"><a href=" #">FASHION</a></span>
+                <span class="nav-item3"><a href=" #">FAVOURITE</a></span>
+                <span class="nav-item4"><a href=" #">LIFESTYLE</a></span>
+                <button class="button1">SING UP</button>
+            </div>
+        </div>
+        <div class="header">
+            <img src="/6 week/homewoork/2/images/Group 69.png" alt="general img">
+        </div>
+        <div class="brands">
+            <img src="/6 week/homewoork/2/images/Brands.png" alt="brands">
+        </div>
+        <div class="main">
+            <div class="main1_1">
+                <span><img src="/6 week/homewoork/2/images/New Arrivals.png"></span>
+            </div>
+            <div class="main1">
+                <a href=" #"><img src="/6 week/homewoork/2/images/Frame 15.png"></a>
+                <a href=" #"><img src="/6 week/homewoork/2/images/Frame 16.png"></a>
+                <a href=" #"><img src="/6 week/homewoork/2/images/Frame 17.png"></a>
+            </div>
+            <div class="main2">
+                <img src="/6 week/homewoork/2/images/Banner.png" alt="Banner">
+            </div>
+            <div class="main3_1">
+                <img src="/6 week/homewoork/2/images/Young’s Favourite.png">
+            </div>
+            <div class="main3">
+                <a href=" #"><img src="/6 week/homewoork/2/images/Group 79.png"></a>
+                <a href=" #"><img src="/6 week/homewoork/2/images/Group 80.png"></a>
+            </div>
+            <div class="main4">
+                <img src="/6 week/homewoork/2/images/Vouchers.png" alt="foto vouchers">
+            </div>
+            <div class="main5">
+                <img src="/6 week/homewoork/2/images/JOIN SHOPPING COMMUNITY TO GET MONTHLY PROMO.png">
+                <img src="/6 week/homewoork/2/images/Type your email down below and be young wild generation.png">
+                <input type="text" placeholder="Add your email here" name="email" required>
+                <label for="email" class="button1"><b>SEND</b></label>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer1">
+                <img src="/6 week/homewoork/2/images/FASHION1.png">
+                <img src="/6 week/homewoork/2/images/Complete your style with awesome clothes from us..png">
+                <div class="footer1_1">
+                    <a href=" #"><img src="/6 week/homewoork/2/images/Group 10.png"></a>
+                    <a href=" #"><img src="/6 week/homewoork/2/images/Group 11.png"></a>
+                    <a href=" #"><img src="/6 week/homewoork/2/images/Group 12.png"></a>
+                    <a href=" #"><img src="/6 week/homewoork/2/images/Group 13.png"></a>
+                </div>
+            </div>
+            <div class="footer2">
+                <span class="Company"><a href=" #">Company</a></span>
+                <span class="About"><a href=" #">About</a></span>
+                <span class="Contact us"><a href=" #">Contact us</a></span>
+                <span class="Support"> <a href=" #">Support</a></span>
+                <span class="Careers"><a href=" #"> Careers</a></span>
+            </div>
+            <div class="footer3">
+                <span class="Quick Link"><a href=" #">Quick Link</a></span>
+                <span class="Share Location"><a href=" #">Share Location</a></span>
+                <span class="Orders Tracking"><a href=" #">Orders Tracking</a></span>
+                <span class="Size Guide"> <a href=" #">Size Guide</a></span>
+                <span class="FAQs"><a href=" #">FAQs</a></span>
+            </div>
+            <div class="footer4">
+                <span class="Legal"><a href=" #">Legal</a></span>
+                <span class="Terms & conditions"><a href=" #">STerms & conditions</a></span>
+                <span class="Privacy Policy"><a href=" #">Privacy Policy</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
